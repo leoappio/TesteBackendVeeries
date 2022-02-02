@@ -7,6 +7,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>C:\Users\leonardo.appio\source\repos\TesteVeeries\TesteVeeries\TesteVeeries.xml</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>
+    <OutputPath>bin\Debug\net5.0\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\leonardo.appio\source\repos\TesteVeeries\TesteVeeries\TesteVeeries.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <OutputPath>bin\Release\net5.0\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
