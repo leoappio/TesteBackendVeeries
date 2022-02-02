@@ -10,5 +10,6 @@ namespace TesteVeeries.Models.Interfaces
         public IEnumerable<CashDTO> GetAll();
         public IEnumerable<CashDTO> GetWithçAtName();
         public IEnumerable<CashDTO> GetWithUAtName();
+        public IEnumerable<CashDTO> GetAllEvenAndMultipleOf5Values();
     }
 }

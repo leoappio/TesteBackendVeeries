@@ -97,6 +97,31 @@ namespace TesteVeeries.Repositories
 
             return cashList;
         }
+        public IEnumerable<CashDTO> GetAllEvenAndMultipleOf5Values()
+        {
+            List<CashDTO> cashList = new();
+            SqlConnection connection = new SqlConnection(_connectionString);
+
+            connection.Open();
+            SqlCommand query = new SqlCommand("SELECT * FROM CASH WHERE CASH_VALUE % 2 = 0 AND CASH_VALUE % 5 = 0", connection);
+            SqlDataReader reader = query.ExecuteReader();
+
+            while (reader.Read())
+            {
+                CashDTO cash = new()
+                {
+                    Id = int.Parse(reader["ID"].ToString()),
+                    Value = int.Parse(reader["CASH_VALUE"].ToString()),
+                    Animal = reader["CASH_ANIMAL"].ToString(),
+                };
+
+                cashList.Add(cash);
+            }
+
+            connection.Close();
+
+            return cashList;
+        }
 
     }
 }

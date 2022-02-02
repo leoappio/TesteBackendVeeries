@@ -40,5 +40,12 @@ namespace TesteVeeries.Controllers
         {
             return Ok(_cashRepository.GetWithUAtName());
         }
+
+        [HttpGet]
+        [Route("/GetAllEvenAndMultipleOf5Values")]
+        public ActionResult GetAllEvenAndMultipleOf5Values()
+        {
+            return Ok(_cashRepository.GetAllEvenAndMultipleOf5Values());
+        }
     }
 }
