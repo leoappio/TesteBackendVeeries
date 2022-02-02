@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TesteVeeries.Models.Entities;
+using TesteVeeries.Models.Interfaces;
 
 namespace TesteVeeries.Controllers
 {
@@ -11,5 +13,18 @@ namespace TesteVeeries.Controllers
     [ApiController]
     public class ProductivityController : ControllerBase
     {
+        private readonly IProductivityRepository _productivityRepository;
+
+        public ProductivityController(IProductivityRepository productivityRepository)
+        {
+            _productivityRepository = productivityRepository;
+        }
+
+        [HttpGet]
+        public ActionResult Get([FromQuery] ProductivityRequest request)
+        {
+            double production = _productivityRepository.GetProductivity(request);
+            return Ok(new { production = production.ToString("F") + " sc/ha" });
+        }
     }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TesteVeeries</name>
+    </assembly>
+    <members>
+        <member name="P:TesteVeeries.Models.Entities.ProductivityRequest.Culture">
+            <summary>
+            1 = Soja,
+            2 = Milho
+            </summary>
+        </member>
+        <member name="P:TesteVeeries.Models.Entities.ProductivityRequest.Year">
+            <summary>
+            1 = 2020,
+            2 = 2019
+            </summary>
+        </member>
+        <member name="P:TesteVeeries.Models.Entities.ProductivityRequest.Location">
+            <summary>
+            1 = Sorriso,
+            2 = Mato Grosso,
+            3 = Brasil
+            </summary>
+        </member>
+    </members>
+</doc>
