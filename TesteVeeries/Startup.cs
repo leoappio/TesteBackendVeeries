@@ -42,6 +42,7 @@ namespace TesteVeeries
 
             services.AddScoped<ICashRepository, CashRepository>();
             services.AddScoped<IProductivityRepository, ProductivityRepository>();
+            services.AddScoped<IProvincesOfUkraineRepository, ProvincesOfUkraineRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
