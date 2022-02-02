@@ -23,8 +23,8 @@ namespace TesteVeeries.Controllers
         [HttpGet]
         public ActionResult Get([FromQuery] ProductivityRequest request)
         {
-            double production = _productivityRepository.GetProductivity(request);
-            return Ok(new { production = production.ToString("F") + " sc/ha" });
+            double productivity = _productivityRepository.GetProductivity(request);
+            return Ok(new { production = productivity.ToString("F") + " sc/ha" });
         }
     }
 }
